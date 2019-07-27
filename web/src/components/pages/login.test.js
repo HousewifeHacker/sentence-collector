@@ -19,5 +19,6 @@ test('Login button is disabled without input values', () => {
     let component = mount(<Provider store={store}><ConnectedLogin /></Provider>);
 
     expect(component).toMatchSnapshot();
+    expect(component.find('form#login button').is('[disabled]')).toBeTruthy();
 })
 
