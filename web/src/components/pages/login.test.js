@@ -1,7 +1,6 @@
-import React from 'react';
 import { mount } from 'enzyme';
+import React from 'react';
 import { Provider } from 'react-redux';
-import renderer from 'react-test-renderer';
 
 import ConnectedLogin from '../../containers/login';
 import { getStore } from '../../tests/testUtils';
@@ -20,5 +19,5 @@ test('Login button is disabled without input values', () => {
 
     expect(component).toMatchSnapshot();
     expect(component.find('form#login button').is('[disabled]')).toBeTruthy();
-})
+});
 
